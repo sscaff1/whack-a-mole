@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Whack a Mole</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <div class="board">
+    <div class="row status">
+      <div class="timeLeft">
+        <h2>Time Left: <span class="timeLeftNumber">10.0</span>s</h2>
+      </div>
+      <div class="score">
+        <h2>Moles Whacked: <span class="scoreNumber">0</span></h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="container">
+        <div class="hole"></div>
+        <div class="mole"></div>
+      </div>
+      <div class="container">
+        <div class="hole"></div>
+        <div class="mole"></div>
+      </div>
+      <div class="container">
+        <div class="hole"></div>
+        <div class="mole"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="container">
+        <div class="hole"></div>
+        <div class="mole"></div>
+      </div>
+      <div class="container">
+        <div class="hole"></div>
+        <div class="mole"></div>
+      </div>
+      <div class="container">
+        <div class="hole"></div>
+        <div class="mole"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="container">
+        <div class="hole"></div>
+        <div class="mole"></div>
+      </div>
+      <div class="container">
+        <div class="hole"></div>
+        <div class="mole"></div>
+      </div>
+      <div class="container">
+        <div class="hole"></div>
+        <div class="mole"></div>
+      </div>
+    </div>
+  </div>
+  <div class="controls row">
+    <button class="start">Start</button>
+    <button class="reset hidden">Reset</button>
+    <button class="stop hidden">Stop</button>
+    <button class="resume hidden">Resume</button>
+
+  </div>
+  <h2 class="gameOver hidden">Game Over</h2>
+  <script src="index.js"></script>
+</body>
+
+</html>

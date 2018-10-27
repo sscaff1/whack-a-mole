@@ -1,0 +1,82 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.row {
+  display: flex;
+  justify-content: space-around;
+  max-width: 700px;
+  margin: 0 auto;
+}
+.row.status {
+  padding-top: 20px;
+  justify-content: space-between;
+}
+
+.board {
+  background-color: forestgreen;
+  max-height: 50%;
+  padding-bottom: 30px;
+}
+
+.container {
+  overflow: hidden;
+  position: relative;
+  height: 150px;
+  width: 25%;
+}
+
+.hole {
+  background-color: brown;
+  border-radius: 100%;
+  bottom: 0;
+  height: 25%;
+  position: absolute;
+  width: 100%;
+}
+
+.mole {
+  background: url('mole.png') no-repeat;
+  background-size: 100% auto;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 100%;
+  transition: top 0.3s;
+}
+
+.mole.show {
+  top: 0;
+}
+
+.controls {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 0;
+}
+
+button {
+  background: #230b66;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  font-size: 14px;
+  height: 50px;
+  text-align: center;
+  width: 20%;
+}
+
+.hidden {
+  display: none;
+}
+
+.gameOver {
+  text-align: center;
+}
