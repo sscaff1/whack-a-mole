@@ -17,6 +17,7 @@ body {
 .row.status {
   justify-content: space-between;
   padding-top: 20px;
+  text-align: center;
 }
 
 .row.status > div {
@@ -70,7 +71,6 @@ body {
 
   .row.status {
     font-size: .8em;
-    text-align: center;
   }
 }
 

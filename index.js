@@ -67,7 +67,7 @@ function hitMole(e) {
   }
   score += 1;
   e.target.classList.remove('show');
-  scoreText.innerHTML = score;
+  scoreText.textContent = score;
 }
 
 for (let i = 0; i < moles.length; i += 1) {
@@ -100,7 +100,7 @@ function setUiBasedOnState(state) {
       stopButton.classList.add('hidden');
       resumeButton.classList.add('hidden');
       gameOverMessage.classList.add('hidden');
-      timeLeftText.innerHTML = '10.0';
+      timeLeftText.textContent = '10.0';
       break;
     }
     case gameStates.GAME_OVER: {
@@ -118,7 +118,7 @@ function setUiBasedOnState(state) {
 
 function resetGame(dontChangeUiState) {
   score = 0;
-  scoreText.innerHTML = score;
+  scoreText.textContent = score;
   gameActive = false;
   timeLeftInGame = GAME_TIME;
   clearInterval(timeLeftInterval);
@@ -133,9 +133,9 @@ function startTimeoutForEndGame(gameTimeLeft) {
   timeLeftInterval = setInterval(function setTimeLeftUi() {
     const timeLeftMs = startTime + timeLeftInGame - Date.now();
     if (timeLeftMs >= 0) {
-      timeLeftText.innerHTML = (timeLeftMs / 1000).toFixed(1);
+      timeLeftText.textContent = (timeLeftMs / 1000).toFixed(1);
     } else {
-      timeLeftText.innerHTML = (0).toFixed(1);
+      timeLeftText.textContent = (0).toFixed(1);
       clearInterval(timeLeftInterval);
     }
   }, TIME_LEFT_INTERVAL_UPDATE);
