@@ -70,9 +70,9 @@ function hitMole(e) {
   scoreText.innerHTML = score;
 }
 
-moles.forEach(function molesEach(mole) {
-  mole.addEventListener('click', hitMole);
-});
+for (let i = 0; i < moles.length; i += 1) {
+  moles[i].addEventListener('click', hitMole);
+}
 
 // button controls functionality
 function setUiBasedOnState(state) {
@@ -120,6 +120,7 @@ function resetGame(dontChangeUiState) {
   score = 0;
   scoreText.innerHTML = score;
   gameActive = false;
+  timeLeftInGame = GAME_TIME;
   clearInterval(timeLeftInterval);
   clearTimeout(gameTimeout);
   if (!dontChangeUiState) {

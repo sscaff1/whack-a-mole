@@ -11,12 +11,16 @@ body {
 .row {
   display: flex;
   justify-content: space-around;
-  max-width: 700px;
   margin: 0 auto;
+  max-width: 700px;
 }
 .row.status {
-  padding-top: 20px;
   justify-content: space-between;
+  padding-top: 20px;
+}
+
+.row.status > div {
+  flex: 1;
 }
 
 .board {
@@ -53,6 +57,21 @@ body {
 
 .mole.show {
   top: 0;
+}
+
+@media (max-width: 700px) {
+  .mole {
+    background-size: auto 80%;
+    background-position: center bottom;
+  }
+  .mole.show {
+    top: 15%;
+  }
+
+  .row.status {
+    font-size: .8em;
+    text-align: center;
+  }
 }
 
 .controls {
